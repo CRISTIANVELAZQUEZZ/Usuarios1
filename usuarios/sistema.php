@@ -7,12 +7,15 @@
   
   HTML::cabeceras(array('title'=>'Sistema seguro', 'description'=>'Lo que sea...'));
   
-  
-  
   $body = array('contenedor'=>array('uno'=>'<p>Usuario válido</p>',
                                     'dos'=>'<a href="cerrar.php">Cerrar sesión</a>'));
+ 
   
-  HTML::cuerpo($body);
+  $usuarios=LIGA(usuarios);
+$columnas=(id,nombre,fecha');
+HTML::tabla($usuarios,'usuarios',$columnas);
+ 
+ HTML::cuerpo($body);
   
   HTML::pie();
  } else {
